@@ -1,1 +1,1 @@
-# IS436-CodePlus
+# EduStock Exchange Platform
