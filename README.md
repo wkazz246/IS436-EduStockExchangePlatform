@@ -34,3 +34,6 @@ For any suggestions for common problems or issues please open an issue on github
 
 ## License
 This project has been intended for the use on a public facing webpage. It is to be used by university students or individuals looking to utilize some of the stock market teaching tools and resources we offer. Source code is available and is open to the public within the repository.
+
+![image](https://github.com/user-attachments/assets/c68e1a43-d865-4980-a256-d70773b0f4ab)
+
