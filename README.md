@@ -17,7 +17,7 @@ To use the EduStock Exchange Platform:
 The project uses the following technologies:
 - **Frontend**: HTML, CSS
 - **Backend**: Django Framework, Python
-- **Database**: MySQL
+- **Database**: MySQL (Docker)
 - **Cloud Hosting**: AWS (Amazon Web Services)
 - **Version Control**: Git/GitHub
 - **Integration**: Real-time Stock Market API
