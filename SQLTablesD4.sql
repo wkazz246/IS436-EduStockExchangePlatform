@@ -1,3 +1,4 @@
+-- Active: 1731442246085@@127.0.0.1@3306@EdustockDB
 
 CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -5,7 +6,7 @@ CREATE TABLE users (
     password_hash VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     funds REAL DEFAULT 0.0,
-    created_at DATETIME NOT NULL
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE stocks (
@@ -13,7 +14,7 @@ CREATE TABLE stocks (
     symbol VARCHAR(255) NOT NULL UNIQUE,
     company_name VARCHAR(255) NOT NULL,
     current_price REAL,
-    last_updated DATETIME
+    last_updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE portfolio (
@@ -21,7 +22,7 @@ CREATE TABLE portfolio (
     user_id INTEGER NOT NULL,
     stock_id INTEGER NOT NULL,
     quantity INTEGER NOT NULL,
-    purchase_date DATETIME NOT NULL,
+    purchase_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (stock_id) REFERENCES stocks(id)
 );
@@ -34,7 +35,7 @@ CREATE TABLE transactions (
     quantity INTEGER NOT NULL,
     price_per_unit REAL NOT NULL,
     total_amount REAL NOT NULL,
-    trade_date DATETIME NOT NULL,
+    trade_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (stock_id) REFERENCES stocks(id)
 );
@@ -43,9 +44,11 @@ CREATE TABLE stock_prices (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     stock_id INTEGER NOT NULL,
     price REAL NOT NULL,
-    recorded_at DATETIME NOT NULL,
+    recorded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP NOT NULL,
     FOREIGN KEY (stock_id) REFERENCES stocks(id)
 );
+
+
 
 
 INSERT INTO users (username, password_hash, email, funds, created_at) 
