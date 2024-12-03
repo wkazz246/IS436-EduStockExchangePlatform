@@ -20,4 +20,4 @@ jobs:
         with:
           context: eduexchange/
           push: true
-          tags: admc1337/eduexchange:${{github.run_number}}
+          tags: admc1337/edustock:${{github.run_number}}
