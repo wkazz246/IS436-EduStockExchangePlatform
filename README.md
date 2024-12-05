@@ -23,11 +23,13 @@ The project uses the following technologies:
 - **Integration**: Real-time Stock Market API
 
 ## Contributors
-* Alejandro Diaz Meinecke
-* Kidus Solomon
-* Wardan Kazzalbach
-* Arham Ahmed
-* Izzie Powell
+| Name     | Role          |
+| -------- | -------------- |
+| Alejandro Diaz Meinecke | Backend Developer |
+| Kidus Solomon | Database/Network Developer |
+| Wardan Kazzalbach | Project Manager |
+| Arham Ahmed | Systems Analyst |
+| Izzie Powell | Frontend Developer/Lead Designer |
 
 ## Help
 For any suggestions for common problems or issues please open an issue on github and we will look into your comments as soon as possible.
