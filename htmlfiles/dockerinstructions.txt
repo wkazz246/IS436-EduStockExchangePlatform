@@ -1,0 +1,5 @@
+When trying to run the code in the docker container, must do these commands in your terminal to run (I used VSCode to run these commands and access the website)
+1. docker pull admc1337/edustock:latest
+2. docker run -d -p 8000:8000 --name edustock_website admc1337/edustock:latest
+3. Enter this into your web browser when running the container: http://localhost:8000
+Must have it running in Docker to access
