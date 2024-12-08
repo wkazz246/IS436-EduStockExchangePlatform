@@ -808,6 +808,7 @@ Chosen Alternative: Alt 2: Custom Development
 We chose custom development as the preferred alternative because it best meets our evaluation criteria, allowing us to build the system from the ground up based on the specific requirements we have identified. This approach also has the potential to be the most cost-effective solution in the long term. While the first alternative, where the trading simulation app, MarketSim, would implement changes, scored closely, custom development stands out due to its flexibility in enabling modifications and its enhancement of ease of use, making it the clear choice.
 
 **Non-Functional Requirements and Architectures**
+
 ![NFR_and_Architectures](NFR_and_Architectures.png)
 
 **Justification**
