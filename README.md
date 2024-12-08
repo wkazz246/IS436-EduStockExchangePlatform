@@ -669,6 +669,9 @@ ERD Components:
     * Relationships:
         * Many-to-One with Stocks
 
+ERD Diagram:
+
+![ERD Diagram](ERD_Diagram.png)
 
 
 
