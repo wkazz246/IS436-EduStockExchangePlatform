@@ -828,7 +828,23 @@ The thin client-server architecture, supported by cloud computing, is the most s
 ![System Architecture Diagram](systemdesign.png)
 
 ## Phase 5: User Interface Design, Program design and System Implementation
+[WireFrames](WireFrames.pdf)
 
+**GitHub Code Repository**
+![Repository Screenshot](Repository_SS.png)
+
+[Link to Repository](https://github.com/wkazz246/IS436-EduStockExchangePlatform)
+
+[Link to EduExchange Folder](https://github.com/wkazz246/IS436-EduStockExchangePlatform/tree/main/eduexchange)
+
+**DockerHub Image**
+![DockerHub Image](DockerHub_img.png)
+
+[DockerHub Image URL](https://hub.docker.com/r/admc1337/edustock)
+
+**Docker Hub Pull Command:** docker pull admc1337/edustock:45
+
+**Example of a Run:** docker run -d -p 8080:80 admc1337/edustock:45
 
 ## Using the application
 To use the EduStock Exchange Platform:
