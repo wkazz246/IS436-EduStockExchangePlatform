@@ -24,10 +24,10 @@ The system architecture follows a Thin Client-Server model supplemented with Clo
 ## Phases of System Design
 The designing of this system went through five phases. The phases were as follows:
 1. System Request - In this phase, we completed a system request. This included the business need, business requirements, business value, special issues or constraints, feasibility analysis, cost-benefit analysis, and the project methodology.
-1. Requirements Definition Document and Use Cases
-1. Process Modeling
-1. Data Modeling and Starting Design
-1. User Interface Design, Program design and System Implementation
+1. Requirements Definition Document and Use Cases - In this phase, we defined functional and non-functional requirements with supporting documentation. Supporting documentation included interviews, observations, questionnaires, and document analysis. We also completed the use case diagram and detailed each use case.
+1. Process Modeling - In this phase, we designed diagrams for the system processes. These included the context, level 0, and level 1 diagrams. We also included text definitions for each level 1 diagram.
+1. Data Modeling and Starting Design - In this phase, we built and defined the entity-relationship diagram. We also wrote SQL scripts, displayed database tables, completed an alternative matrix and non-functional requirements and architectures with justification, charted hardware and software specifications, and designed the system architecture diagram.
+1. User Interface Design, Program design and System Implementation - In this phase, we implemented the system. We developed wireframes for each webpage and hosted the system using Docker.
 
 ## Phase 1: System Request
 The organization requires an educational tool that enables users to learn stock trading in a real-world environment without financial risk. Beginners will use this platform to understand market dynamics, foster financial literacy, and potentially attract a new user base interested in economic education.
@@ -116,6 +116,73 @@ For this project, the most appropriate and efficient methodology would be the SC
 <br>
 
 ## Phase 2: Requirements Definition Document and Use Cases
+**Functional Requirements**
+* Process-Oriented Requirements
+    * User Account Management:
+        * It lets users create an account with an email and password
+        * Allow users to reset passwords if need be
+        * Automatically give users an initial amount of money on account creation
+        * Provide users an interface to add virtual money manually
+        * Display the user’s portfolio with account balances, assets, and transaction histories
+    * Real-Time Stock Data Integration:
+        * Fetch live stock data from third-party stock market API
+        * Display real-time stock prices and market trends
+        * Update stock market data regularly to get accurate and current conditions
+    * Trading Functionality:
+        * Let users buy and sell stocks using virtual money
+        * Allow users to view and manage current stock holdings in their portfolio
+        * Update the user’s portfolio and balance after each trade
+        * Maintain a record of user’s transactions with stock prices, how many stocks, and timing of trades
+    * Educational Resources:
+        * Provide access to tutorials and educational content on stock trading, market behavior, and trading tips
+        * Offer an interactive guide for beginners to learn the stock market fundamentals
+* Information-Oriented Requirements
+    * User Information
+        * Store user account information such as usernames, passwords, and portfolio data
+        * Track trading activities, such as stock bought and sold and virtual money balance
+    * Stock Data
+        * Store real-time stock data fetched from API
+        * Record stock data for each user’s transaction history
+    * Educational Content
+        * Store educational material, articles, and tutorials on stock trading and financial literacy/information
+
+**Non-Functional Requirements**
+* Operational
+    * Any Web browser should be compatible with the system.
+    * The system should integrate with a stock market API.
+    * The system should be user friendly and allow for simple navigation in the trading process.
+* Performance
+    * The system should be accessible to users 24 hours a day and 365 days a year.
+    * The system supports 10,000 users simultaneously without a delay in performance.
+    * The response time for user activities should be less than 2 seconds.
+* Security
+    * The system utilizes two-factor authentication to keep user information protected.
+    * The system is only accessible to authorized users and technicians when needed.
+    * User data will be encrypted to decrease the likelihood of a security breach.
+* Cultural/Political
+    * The system is compliant with all data protection laws.
+    * Terms and conditions are clearly communicated to users.
+    * Users and regulatory bodies will be notified in the event of a security breach.
+
+**Supporting Documentation**
+
+Conclusion from the Interviews:
+* The interviews with these stakeholders provides valuable insights into the design and functionality of the EduStock Exchange web application platform. Key themes emerged around the need for real-time data integration, user-friendly design, educational resources for beginners, and gamification to boost user engagement. These inputs were critical in shaping both the functional and non-functional requirements of the system, ensuring it meets the diverse needs of users ranging from high school seniors to financial literacy program students in college.
+
+Conclusion from the observation:
+* Overall, the MarketSim app falls short in supporting beginners due to its complex setup, difficult interface, and lack of guidance. To address these issues, our EduStock Exchange Platform should prioritize ease of use, provide comprehensive educational content, and include engaging features that make learning fun and effective. This way, our platform can better serve as a learning tool for students new to the stock market.
+
+Summary of Responses from Questionnaire:
+* Stock Market Familiarity: 59% (16 out of 27) of respondents reported having little to no knowledge of the stock market, indicating a strong need for beginner-friendly content and guided learning resources.
+* Simulation Experience: Only 26% (7 out of 27) of respondents had used a trading simulation before, showing that most students are unfamiliar with such platforms.
+* Preferred Learning Resources: 52% (14 out of 27) preferred interactive tutorials and hands-on exercises, while 30% (8 out of 27) preferred video content.
+* Feature Preferences: The most requested features were real-time stock trading simulations, 74% of users voted  (20 out of 27) and step-by-step guides, 67% voted (18 out of 27).
+* Challenges Identified: The top challenges included understanding complex financial terms, 63% of users voted (17 out of 27) and lack of practical application opportunities, 56% of users voted (15 out of 27).
+
+Key Insights and Conclusion from Document Analysis: 
+* The knowledge gained from the documents and report that were analyzed  show a clear need for an educational platform that bridges the gap in financial literacy, supports equity in learning, and incorporates global best practices. By making financial concepts and ideas more accessible to students and providing engaging, real-world simulations, the EduStock Exchange Platform can address the shortcomings found in the current financial education systems and empower all students to build essential financial skills.
+
+
 
 **Use Case Documents:**
 
@@ -345,6 +412,4 @@ This project has been intended for the use on a public facing webpage. It is to 
 
 
 ![1a0d8357-51e2-47c1-a0e1-fde9c975ad7a](https://github.com/user-attachments/assets/26fd2632-1892-46b8-9abd-7b66341d9960)
-
-
 
