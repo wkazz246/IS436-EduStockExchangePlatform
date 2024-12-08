@@ -182,7 +182,8 @@ Summary of Responses from Questionnaire:
 Key Insights and Conclusion from Document Analysis: 
 * The knowledge gained from the documents and report that were analyzed  show a clear need for an educational platform that bridges the gap in financial literacy, supports equity in learning, and incorporates global best practices. By making financial concepts and ideas more accessible to students and providing engaging, real-world simulations, the EduStock Exchange Platform can address the shortcomings found in the current financial education systems and empower all students to build essential financial skills.
 
-
+**Use Case Diagram**
+![Use Case Diagram](Use_case_diagram.png)
 
 **Use Case Documents:**
 
