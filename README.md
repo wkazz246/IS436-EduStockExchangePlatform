@@ -338,7 +338,7 @@ Use Case 4:
 Use Case 5:
 ---
 
-**Use Case Name:** User Log-in **ID:** UC-5 **Priority:** Medium
+**Use Case Name:** Portfolio Management **ID:** UC-5 **Priority:** Medium
                 
 
 **Actor:** Registered User, System, Stock Data API, User Database
@@ -775,6 +775,28 @@ VALUES (3, 2800.00, '2024-11-10 11:00:00');
 
 
 ```
+
+[SQL Tables](SQL_Tables.pdf)
+
+**Alternative Matrix**
+
+Defining Evaluation Criteria:
+* Integration with Stock Market APIs
+    * The ability to seamlessly connect with real-time stock market data sources, ensuring accurate and timely updates for user portfolios.
+* Data Security and Privacy
+    * The system's capability to securely store, manage, and protect user information and financial data, is essential for maintaining trust and compliance.
+* Customizability
+    * The degree to which the system can be modified and expanded to meet specific project requirements and accommodate future feature updates.
+* Scalability
+    * The capacity of the system to support an increasing number of users and a growing volume of data without compromising performance.
+* Cost
+    * The initial and ongoing costs associated with developing, implementing, and maintaining the platform impact the project’s budget feasibility.
+* Organization Fit
+    * How well the system aligns with the project’s goals and the team’s ability to manage, operate, and sustain the system within the organization.
+* Ease of Use
+    * The usability and user experience
+* Ease of Learning
+    * How quickly users can learn how to maneuver through the system
 
 
 
