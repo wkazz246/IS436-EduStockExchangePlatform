@@ -100,6 +100,12 @@
         .navigation a:hover {
             color: #1c7430;
         }
+        #login-prompt {
+            display: none;
+        }
+        #dashboard-content {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +116,15 @@
             <a href="./dashboard.html">Dashboard</a>
             <a href="./education.html">Educational Page</a>
         </div>
-        <div class="dashboard-container">
+        <div id="login-prompt">
+            <h4 class="text-center">Please Log In</h4>
+            <form id="loginForm">
+                <input type="text" id="username" class="form-control" placeholder="Username" required>
+                <input type="password" id="password" class="form-control" placeholder="Password" required>
+                <button type="button" class="btn btn-primary w-100" onclick="loginUser()">Log In</button>
+            </form>
+        </div>
+        <div id="dashboard-content" class="dashboard-container">
             <h3 class="dashboard-title" id="dashboardTitle">Edustock Dashboard</h3>
             <div class="accordion" id="dashboardAccordion">
                 <div class="accordion-item">
@@ -122,7 +136,7 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#dashboardAccordion">
                         <div class="accordion-body">
                             <div class="list-group">
-                                <a href="./home.html" class="list-group-item list-group-item-action nav-link">Home Page</a>
+                                <a href="./index.html" class="list-group-item list-group-item-action nav-link">Home Page</a>
                                 <a href="./education.html" class="list-group-item list-group-item-action nav-link">Educational Page</a>
                                 <a href="./stocks.html" class="list-group-item list-group-item-action nav-link">Buy & Sell Page</a>
                             </div>
@@ -152,39 +166,56 @@
     </div>
 
     <script>
-        // Hardcoded user data to always display Alice's information for demonstration purposes
-        const user = {
-            username: 'alice',
-            password: 'password123',
-            welcomeMessage: 'Welcome back, Alice!',
-            image: 'https://via.placeholder.com/100',
-            email: 'alice@example.com',
-            portfolioValue: '€5,000',
-            stocks: [
-                { symbol: 'TSLA', quantity: 5 },
-                { symbol: 'AMZN', quantity: 2 }
-            ]
+        const users = {
+            alice: { email: "alice@example.com", funds: 1200.50, portfolio: "3 shares of TSLA", password: "password123" },
+            bob: { email: "bob@example.com", funds: 3500.00, portfolio: "5 shares of AMZN", password: "password456" },
+            carol: { email: "carol@example.com", funds: 500.75, portfolio: "2 shares of GOOGL", password: "password789" }
         };
 
-        // Function to load hardcoded user profile into the dashboard
-        function loadDashboard() {
-            document.getElementById('userName').innerText = user.username;
+        function loginUser() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Mock password validation
+            if (users[username] && password === password) {
+                localStorage.setItem('loggedInUser', username);
+                showDashboard(username);
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+
+        function showDashboard(username) {
+            document.getElementById('login-prompt').style.display = 'none';
+            document.getElementById('dashboard-content').style.display = 'block';
+
+            const user = users[username];
+            document.getElementById('userName').innerText = username;
             document.getElementById('userEmail').innerText = user.email;
-            document.getElementById('userImage').src = user.image;
-            document.getElementById('portfolioValue').innerText = user.portfolioValue;
+            document.getElementById('userImage').src = 'https://via.placeholder.com/100';
+            document.getElementById('portfolioValue').innerText = `$${user.funds.toFixed(2)}`;
 
             // Populate owned stocks
             const stocksList = document.getElementById('stocksList');
-            user.stocks.forEach(stock => {
+            stocksList.innerHTML = '';
+            user.portfolio.split(', ').forEach(stock => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item';
-                listItem.innerText = `${stock.symbol}: ${stock.quantity} shares`;
+                listItem.innerText = stock;
                 stocksList.appendChild(listItem);
             });
         }
 
-        // Load dashboard on page load
-        window.onload = loadDashboard;
+        document.addEventListener("DOMContentLoaded", function () {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+
+            if (loggedInUser && users[loggedInUser]) {
+                showDashboard(loggedInUser);
+            } else {
+                document.getElementById('login-prompt').style.display = 'block';
+                document.getElementById('dashboard-content').style.display = 'none';
+            }
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

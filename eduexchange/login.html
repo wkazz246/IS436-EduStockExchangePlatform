@@ -93,8 +93,9 @@
                     // Redirect to admin page for admin user
                     window.location.href = './admin.html';
                 } else {
-                    // Redirect to user dashboard
-                    localStorage.setItem('loggedInUser', JSON.stringify({ username: user.username }));
+                    // Save only the username in localStorage for dashboard.html
+                    localStorage.setItem('loggedInUser', username);
+                    alert(`Logged in as ${username}`);
                     window.location.href = './dashboard.html';
                 }
             } else {
