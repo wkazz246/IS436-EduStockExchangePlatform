@@ -212,8 +212,8 @@
             if (loggedInUser && users[loggedInUser]) {
                 showDashboard(loggedInUser);
             } else {
-                document.getElementById('login-prompt').style.display = 'block';
-                document.getElementById('dashboard-content').style.display = 'none';
+                alert('Please log in to access the dashboard.');
+                window.location.href = './login.html';
             }
         });
     </script>
