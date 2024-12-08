@@ -798,8 +798,33 @@ Defining Evaluation Criteria:
 * Ease of Learning
     * How quickly users can learn how to maneuver through the system
 
+**Team Matrix**
+![Team Matrix](Team_Matrix.png)
 
+**Justification**
 
+Chosen Alternative: Alt 2: Custom Development
+
+We chose custom development as the preferred alternative because it best meets our evaluation criteria, allowing us to build the system from the ground up based on the specific requirements we have identified. This approach also has the potential to be the most cost-effective solution in the long term. While the first alternative, where the trading simulation app, MarketSim, would implement changes, scored closely, custom development stands out due to its flexibility in enabling modifications and its enhancement of ease of use, making it the clear choice.
+
+**Non-Functional Requirements and Architectures**
+![NFR_and_Architectures](NFR_and_Architectures.png)
+
+**Justification**
+
+Chosen Architecture: Thin Client-Server with Cloud Support
+
+The thin client-server architecture, supported by cloud computing, is the most suitable for the EduStock Exchange Platform. This architecture meets key non-functional requirements, such as high availability, scalability, and simplified deployment. Cloud support provides redundancy and allows the system to manage peak loads efficiently, ensuring consistent performance during high user activity. Centralized processing in the thin client-server model also enables essential security features, such as two-factor authentication (2FA), data encryption, compliance with data protection laws, safeguarding user information, and maintaining regulatory standards.
+
+**Trade-offs:** This architecture relies on server processing, which may introduce latency under heavy load conditions. Additionally, user access may be affected if the server experiences downtime. However, cloud integration mitigates these risks by offering load balancing and failover options, enhancing reliability, and minimizing service interruptions. These advantages make Thin Client-Server with Cloud Support the best choice for our platform’s needs and requirements.
+
+**Scalability:** To handle scalability, we leverage cloud computing to dynamically add more servers as needed, ensuring the platform can support high user traffic and process real-time stock market data from external APIs without performance issues. This approach enables the EduStock Exchange Platform to manage concurrent user loads efficiently. Additionally, combining a thin client-server architecture and cloud support ensures the platform remains responsive, accessible, and capable of scaling seamlessly as the user base and data demands grow. For example, if the platform needs to support 10,000 users, adding additional servers within the cloud would maintain optimal performance.
+
+**Hardware and Software Specification**
+![Hardware and Software Specification](Sfwre_Hdwre_Specification.png)
+
+**System Architecture Diagram**
+![System Architecture Diagram](systemdesign.png)
 
 ## Phase 5: User Interface Design, Program design and System Implementation
 
