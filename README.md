@@ -83,32 +83,37 @@ We will be implementing different technical features that will increase the over
 * Organizational Feasibility:\
 We have an experienced team that will be able to achieve our goal of building an application to educate users on investing. All team members are responsible for different aspects of the system. We could encounter the risk of not meeting the expectations of the project but we can prevent this by maintaining communication between teams.
 
-**Cost-Benefit Analysis (3-year Plan starting 2024):**
+**Cost-Benefit Analysis (3-year Plan: 2024-2026):**
+| Year | Cost Item | Description | Estimated Cost|
+|------|-----------|-------------|---------------|
+|2024  |Development Costs|Initial platform development, API integration, and infrastructure setup (cloud hosting, database, and security).|$30,000|
+|      |Licensing Fees|Software licensing, including MySQL and Django components. |$5,000|
+|      |Developer Salaries|Payments for developer team (3 members, 3 months).|$15,000|
+|2025  |Maintenance and Upgrades|System maintenance, scaling infrastructure, and API useage costs.|$30,000|
+|2026  |Maintenance and Upgrades|Ongoing system improvements and user support.|$30,000|
+|Total |           |              |$110,000|
 
-**Costs:**
-* Development Costs (2024):
-    * Initial costs include platform development, API integration for real-time stock data, and setting up the infrastructure (cloud hosting, databases, and security).
-    * Estimated Cost: $50,000.
-* Maintenance & Upgrades (2025-2026):
-    * Continuous development and upgrades, scaling the infrastructure, and covering API usage costs as the user base grows.
-    * Estimate Yearly Cost: $30,000 per year.
+**Benefits**
+| Year | Metric | Description | Estimated Value|
+|------|-----------|-------------|---------------|
+|2024  |User Growth|Estimated acquisition of 10,000 users via free platform.|-|
+|      |Monetization|No monetization in Year 1.|-|
+|      |Revenue|N/A|$0|
+|2025  |User Growth|Projected user base of 50,000 with 10% premium subscriptions.|-|
+|      |Monetization|Ads and premium features introduced.|-|
+|      |Revenue|Estimated from ads and premium features.|$35,000|
+|2026  |User Growth|Expanded user base of 100,000 with 20% premium subscriptions.|-|
+|      |Monetization|Ads and premium features introduced.|-|
+|      |Revenue|Projected revenue in Year 3.|$90,000|
+|Total |           |              |$125,000|
 
-**Benefits:**
-* User Growth:
-    * 2024: Focus on user acquisition with an estimated 10,000 users (free platform).
-    * 2025: Monetization begins through ads and premium features, projected at 50,000 users (10% premium).
-    * 2026: Platform expansion with 100,000 users (20% converting to premium).
-
-* Revenue Projections:
-    * 2025: $35,000 from ads and premium subscriptions.
-    * 2026: $90,000 from ads and premium subscriptions.
-
-**Net Benefit:**
-* 2024: $50,000 loss due to development costs.
-* 2025: $5,000 profit (revenue of $35,000 minus costs of $30,000).
-* 2026: $60,000 profit (revenue of $90,000 minus costs of $30,000).
-
-**Break-Even Point:** Expected by mid-2025, when the cumulative revenue surpasses the initial development costs.
+**Net Benefit**
+| Year | Revenue | Cost | Net Benefit|
+|------|-----------|-------------|---------------|
+|2024  |$0|$50,000|-$50,000|
+|2025  |$35,000|$30,000|$5,000|
+|2026  |$90,000|$30,000|$60,000|
+|Cumulative Total |           |              |$15,000|
 
 **Project Methodology:**\
 For this project, the most appropriate and efficient methodology would be the SCRUM method. SCRUM methodology is an agile team collaboration framework that is used most commonly in areas such as software development by breaking tasks into ‘time-boxed’ iterations. The platform involves multiple features such as account management, real-time data integration, trading, and educational resources. Due to the complexity of these, it would be more feasible to work in iterations in SCRUM before synthesizing. The features can be tested and developed in iterations so they can be regularly adjusted to fit user needs. SCRUM also offers progress tracking to help keep teams organized and on schedule with the time-sensitive features native to the EduStock platform.
@@ -236,8 +241,8 @@ Use Case 2:
 **Trigger:** The use case will initiate when registered user attempts to log in with valid credentials.
 
 **Type:**   
-* [x] External
-* [ ] Temporal
+* [ ] External
+* [x] Temporal
 ---    
 **Preconditions:**
 * The user must have an active account on the EduStock Exchange Platform.
@@ -340,7 +345,7 @@ Use Case 4:
 Use Case 5:
 ---
 
-**Use Case Name:** Portfolio Management **ID:** UC-5 **Priority:** Medium
+**Use Case Name:** Display Portfolio **ID:** UC-5 **Priority:** Medium
                 
 
 **Actor:** Registered User, System, Stock Data API, User Database
@@ -350,8 +355,8 @@ Use Case 5:
 **Trigger:** The user selects the "Portfolio" option from the dashboard.
 
 **Type:**   
-* [x] External
-* [ ] Temporal
+* [ ] External
+* [x] Temporal
 ---    
 **Preconditions:**
 * The user must have an active and logged-in account.
