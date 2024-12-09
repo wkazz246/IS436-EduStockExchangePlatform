@@ -236,7 +236,7 @@ Use Case 2:
 **Use Case Name:** Two-Factor Authentication **ID:** UC-2 **Priority:** High
                 
 
-**Actor:** Registered User
+**Actor:** System
 
 **Description:** This use case describes the process where a user will log in to the EduStock platform using valid credentials and will then be prompted to enter a verification code that was sent to them either via SMS or Email.
 
