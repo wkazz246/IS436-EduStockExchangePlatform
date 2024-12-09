@@ -115,6 +115,8 @@ We have an experienced team that will be able to achieve our goal of building an
 |2026  |$90,000|$30,000|$60,000|
 |Cumulative Total |           |              |$15,000|
 
+**Break-Even Point:** Expected by mid-2025, when the cumulative revenue surpasses the initial development costs.
+
 **Project Methodology:**\
 For this project, the most appropriate and efficient methodology would be the SCRUM method. SCRUM methodology is an agile team collaboration framework that is used most commonly in areas such as software development by breaking tasks into ‘time-boxed’ iterations. The platform involves multiple features such as account management, real-time data integration, trading, and educational resources. Due to the complexity of these, it would be more feasible to work in iterations in SCRUM before synthesizing. The features can be tested and developed in iterations so they can be regularly adjusted to fit user needs. SCRUM also offers progress tracking to help keep teams organized and on schedule with the time-sensitive features native to the EduStock platform.
 
@@ -199,7 +201,7 @@ Use Case 1:
 **Use Case Name:** User Log-in **ID:** UC-1 **Priority:** Medium
                 
 
-**Actor:** Registered User, User Database
+**Actor:** Registered User
 
 **Description:** This use case describes the process by which a registered user logs into the EduStock Exchange Platform to access their account and start trading.
 
@@ -234,7 +236,7 @@ Use Case 2:
 **Use Case Name:** Two-Factor Authentication **ID:** UC-2 **Priority:** High
                 
 
-**Actor:** Registered User, Authentication Service
+**Actor:** Registered User
 
 **Description:** This use case describes the process where a user will log in to the EduStock platform using valid credentials and will then be prompted to enter a verification code that was sent to them either via SMS or Email.
 
@@ -269,7 +271,7 @@ Use Case 3:
 **Use Case Name:** Depositing User Funds **ID:** UC-3 **Priority:** High
                 
 
-**Actor:** Registered User, User’s Bank
+**Actor:** Registered User
 
 **Description:** This use case describes the process by which a user deposits funds (virtual or real) into their account on the EduStock Exchange Platform, allowing them to participate in simulated stock trading with additional capital.
 
@@ -348,7 +350,7 @@ Use Case 5:
 **Use Case Name:** Display Portfolio **ID:** UC-5 **Priority:** Medium
                 
 
-**Actor:** Registered User, System, Stock Data API, User Database
+**Actor:** System
 
 **Description:** This use case describes how a registered user views and manages their portfolio, which includes their current stock holdings, available virtual funds, and transaction history on the EduStock Exchange Platform.
 
