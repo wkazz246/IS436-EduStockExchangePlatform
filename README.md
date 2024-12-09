@@ -851,9 +851,9 @@ The thin client-server architecture, supported by cloud computing, is the most s
 
 [DockerHub Image URL](https://hub.docker.com/r/admc1337/edustock)
 
-**Docker Hub Pull Command:** docker pull admc1337/edustock:45
+**Docker Hub Pull Command:** docker pull admc1337/edustock:60
 
-**Example of a Run:** docker run -d -p 8080:80 admc1337/edustock:45
+**Example of a Run:** docker run -d -p 8080:80 admc1337/edustock:60
 
 ## Using the application
 To use the EduStock Exchange Platform:
